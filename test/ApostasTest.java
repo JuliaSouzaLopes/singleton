@@ -19,5 +19,4 @@ class ApostasTest {
         assertEquals("Usuario 1", Jogador.getInstance().getUsuarioLogado());
     }
 
-
 }
