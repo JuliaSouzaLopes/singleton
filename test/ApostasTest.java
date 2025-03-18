@@ -1,7 +1,7 @@
 package singleton.test;
 
 import org.junit.jupiter.api.Test;
-import singleton.main.Apostas;
+import singleton.main.Jogador;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -9,14 +9,15 @@ class ApostasTest {
 
     @Test
     public void deveRetornarNomeEscola() {
-        Apostas.getInstance().setSaldo(85.99);
-        assertEquals(85.99, Apostas.getInstance().getSaldo());
+        Jogador.getInstance().setSaldo(85.99);
+        assertEquals(85.99, Jogador.getInstance().getSaldo());
     }
 
     @Test
     public void deveRetornarUsuarioLogado() {
-        Apostas.getInstance().setUsuarioLogado("Usuario 1");
-        assertEquals("Usuario 1", Apostas.getInstance().getUsuarioLogado());
+        Jogador.getInstance().setUsuarioLogado("Usuario 1");
+        assertEquals("Usuario 1", Jogador.getInstance().getUsuarioLogado());
     }
+
 
 }

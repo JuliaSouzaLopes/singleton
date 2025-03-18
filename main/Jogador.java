@@ -1,15 +1,19 @@
 package singleton.main;
 
-public class Apostas {
+import java.util.List;
 
-    private Apostas() {};
-    private static Apostas instance = new Apostas();
-    public static Apostas getInstance() {
+public class Jogador {
+
+    private Jogador() {};
+    private static Jogador instance = new Jogador();
+    public static Jogador getInstance() {
         return instance;
     }
 
     private double saldo;
     private String usuarioLogado;
+
+    private List<Aposta> apostas;
 
     public double getSaldo() {
         return saldo;
@@ -26,4 +30,8 @@ public class Apostas {
     public void setUsuarioLogado(String usuarioLogado) {
         this.usuarioLogado = usuarioLogado;
     }
+
+    public List<Aposta> getApostas() { return apostas; }
+
+    public void addApostas (Aposta ap) {apostas.add(ap);}
 }
